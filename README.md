@@ -1,1 +1,1 @@
-an e-commerce fashion app
+a mern e-commerce fashion app
