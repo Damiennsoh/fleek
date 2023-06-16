@@ -2,7 +2,7 @@ const express = require('express');
 const { createUser, loginUserCtrl, getAllUser, getAUser, deleteAUser, updatedUser,
      blockUser, unblockUser, handleRefreshToken, logout, updatePassword, forgotPasswordToken,
       resetPassword,  getWishlist, saveAddress, userCart, getUserCart, emptyCart, 
-      applyCoupon, createOrder, getOrders, updateOrderStatus } = require('../controller/UserCtrl');
+      applyCoupon, createOrder, getOrders, updateOrderStatus, loginAdmin } = require('../controller/UserCtrl');
 const { authMiddleware, isAdmin} = require("../middlewares/authMiddleware");
 const router = express.Router();
 router.post('/register', createUser);
@@ -13,7 +13,7 @@ router.put('/ order/update-order/:id', authMiddleware, isAdmin, updateOrderStatu
 
 router.put('/password',authMiddleware, updatePassword);
 router.post('/login', loginUserCtrl  );
-// router.post('/admin-login', loginAdmin );
+router.post('/admin-login', loginAdmin );
 router.post('/cart', authMiddleware, userCart );
 router.post('/cart/applycoupon', authMiddleware, applyCoupon );
 router.post('/cart/cash-order',authMiddleware, createOrder);
