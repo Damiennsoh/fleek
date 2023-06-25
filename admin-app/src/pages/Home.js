@@ -6,6 +6,7 @@ import ProductCard from "../components/ProductCard";
 import SpecialProduct from "../components/SpecialProduct";
 import Container from "../components/Container";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 // import { services } from "../utils/Data";
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
      <div>
       <Header />
     </div>
-    
+
       <Container class1="home-wrapper-1 py-5">
         <div className="row">
           <div className="col-6">
@@ -337,6 +338,10 @@ const Home = () => {
           </div>
         </div>
       </Container>
+      <div>
+      {/* Other content of the Home component */}
+      <Footer />
+    </div>
     </>
   );
 };
