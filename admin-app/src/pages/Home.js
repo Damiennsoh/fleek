@@ -5,11 +5,17 @@ import BlogCard from "../components/BlogCard";
 import ProductCard from "../components/ProductCard";
 import SpecialProduct from "../components/SpecialProduct";
 import Container from "../components/Container";
+import Header from "../components/Header";
 // import { services } from "../utils/Data";
 
 const Home = () => {
   return (
     <>
+    {/* Adding the header component to Home.js file */}
+     <div>
+      <Header />
+    </div>
+    
       <Container class1="home-wrapper-1 py-5">
         <div className="row">
           <div className="col-6">
