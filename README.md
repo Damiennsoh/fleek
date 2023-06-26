@@ -55,8 +55,8 @@ This project is licensed under the MIT license.
 * In summary, this license grants
 - Permission to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software
 - Permission to permit persons to whom the Software is furnished to do the same and
-- prohibits none, as long as the original copyright notice and permission notice are included in all copies or substantial portions of the Software. If you have any questions or concerns about the license, please contact us at psyca**ro20@gmail.com or mafadusei@gmail.com
+- prohibits none, as long as the original copyright notice and permission notice are included in all copies or substantial portions of the Software. If you have any questions or concerns about the license, please contact us at psycaro20@gmail.com or mafadusei@gmail.com
 
 ## Authors:
 - Damien Nsoh Ayine ([@Damiennsoh](https://github.com/Damiennsoh))
-*
+- Mariama Frimpomaa Adusei ([@Blacklov](https://github.com/Blacklov))
