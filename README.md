@@ -23,7 +23,7 @@ Discover the latest trends and fashion must-haves from the comfort of your own h
 
 ## Screenshots
 * ![image](https://github.com/Blacklov/fleek/blob/main/admin-app/screenshots/screenshot1.png)
-* ![image()
+* ![image(https://github.com/Blacklov/fleek/blob/main/admin-app/screenshots/screenshot2.png)
 ## Usage
 * To use our React-based fashion e-commerce app, simply navigate to the app URL in your web browser. Once there, you can browse and search for fashion items, add them to your cart, and proceed to checkout. Our app features a user-friendly interface and intuitive navigation, making it easy to find what you're looking for. With seamless integration of payment options, you can complete your purchase in just a few clicks. Start shopping today and experience the convenience of our fashion e-commerce app!
 
