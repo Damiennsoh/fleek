@@ -19,7 +19,7 @@ Discover the latest trends and fashion must-haves from the comfort of your own h
 
 ## Architecture
 ![image](https://github.com/Blacklov/fleek/blob/main/admin-app/screenshots/Architecture.png)
-* The diagram above shows the separation of the frontend and backend of your application, with the frontend being built using React and the backend being built using Node.js. The two components communicate with each other via RESTful API requests and responses. The backend also interacts with a database to perform queries and updates, while the frontend handles the rendering of the user interface.
+* The diagram above shows the separation of the frontend and backend of the application, with the frontend being built using React and the backend being built using Node.js. The two components communicate with each other via RESTful API requests and responses. The backend also interacts with a database to perform queries and updates, while the frontend handles the rendering of the user interface.
 
 ## Screenshots
 ![image](https://github.com/Blacklov/fleek/blob/main/admin-app/screenshots/screenshot1.png)
