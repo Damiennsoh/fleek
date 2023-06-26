@@ -18,7 +18,7 @@ Discover the latest trends and fashion must-haves from the comfort of your own h
 * As a web-based application, there is no need for installation. Simply access the app through your preferred web browser and start browsing our extensive catalog of fashion items. Our app is optimized for desktop and mobile devices, ensuring a seamless user experience across all platforms. Get started today and elevate your fashion game with just a few clicks!
 
 ## Architecture
-* ![image](https://github.com/Blacklov/fleek/blob/main/admin-app/screenshots/Architecture.png)
+![image](https://github.com/Blacklov/fleek/blob/main/admin-app/screenshots/Architecture.png)
 * The diagram above shows the separation of the frontend and backend of your application, with the frontend being built using React and the backend being built using Node.js. The two components communicate with each other via RESTful API requests and responses. The backend also interacts with a database to perform queries and updates, while the frontend handles the rendering of the user interface.
 
 ## Screenshots
