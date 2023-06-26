@@ -1,9 +1,12 @@
-# FLEEK
+# E-commerce Fashion App
 - [Description](#description)
 - [Installation](#installation)
+- [Architecture](#architecture)
+- [Screenshots](#screenshots)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Authors](#authors)
   
 ## Description
 * This is the final project as an ALX Software Engineering Student where we are being tasked to build an application based on our individual specializations, be it frontend or backend.
@@ -13,6 +16,12 @@ Discover the latest trends and fashion must-haves from the comfort of your own h
   
 ## Installation
 * As a web-based application, there is no need for installation. Simply access the app through your preferred web browser and start browsing our extensive catalog of fashion items. Our app is optimized for desktop and mobile devices, ensuring a seamless user experience across all platforms. Get started today and elevate your fashion game with just a few clicks!
+
+## Architecture
+* 
+
+## Screenshots
+* 
 
 ## Usage
 * To use our React-based fashion e-commerce app, simply navigate to the app URL in your web browser. Once there, you can browse and search for fashion items, add them to your cart, and proceed to checkout. Our app features a user-friendly interface and intuitive navigation, making it easy to find what you're looking for. With seamless integration of payment options, you can complete your purchase in just a few clicks. Start shopping today and experience the convenience of our fashion e-commerce app!
@@ -46,4 +55,8 @@ This project is licensed under the MIT license.
 * In summary, this license grants
 - Permission to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software
 - Permission to permit persons to whom the Software is furnished to do the same and
-- prohibits none, as long as the original copyright notice and permission notice are included in all copies or substantial portions of the Software. If you have any questions or concerns about the license, please contact us at psycaro20@gmail.com or mafadusei@gmail.com
+- prohibits none, as long as the original copyright notice and permission notice are included in all copies or substantial portions of the Software. If you have any questions or concerns about the license, please contact us at psyca**ro20@gmail.com or mafadusei@gmail.com
+
+## Authors:
+*
+*
