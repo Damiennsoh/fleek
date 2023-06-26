@@ -32,4 +32,16 @@ Discover the latest trends and fashion must-haves from the comfort of your own h
  * MongoDB (document-oriented NoSQL database)
  * Mongoose (MongoDB object modeling tool for Node.js)
  * Stripe (payment processing platform)
-* We would also like to express our appreciation to the ALX mentors for their support and inspiration. Our app would not have been possible without their collective knowledge and expertise. Thank you!
+We would also like to express our appreciation to the ALX mentors for their support and inspiration. Our app would not have been possible without their collective knowledge and expertise. Thank you!
+
+## Lincense
+This project is licensed under the MIT license.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the right to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+In summary, this license grants - Permission to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software
+- Permission to permit persons to whom the Software is furnished to do the same and prohibits - None, as long as the original copyright notice and permission notice are included in all copies or substantial portions of the Software. If you have any questions or concerns about the license, please contact us at psycaro20@gmail.com or mafadusei@gmail.com
