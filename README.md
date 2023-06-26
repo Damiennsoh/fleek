@@ -58,5 +58,5 @@ This project is licensed under the MIT license.
 - prohibits none, as long as the original copyright notice and permission notice are included in all copies or substantial portions of the Software. If you have any questions or concerns about the license, please contact us at psyca**ro20@gmail.com or mafadusei@gmail.com
 
 ## Authors:
-*
+- Damien Nsoh Ayine ([@Damiennsoh](https://github.com/Damiennsoh))
 *
