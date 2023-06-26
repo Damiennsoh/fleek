@@ -1,6 +1,4 @@
 # FLEEK
-
-## Table of Content
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
