@@ -5,6 +5,7 @@ const Cart = require('../models/cartModel');
 const Coupon = require('../models/couponModel');
 const Order = require('../models/orderModel');
 const uniqid = require('uniqid');
+const crypto = require("crypto")
 
 const asyncHandler = require("express-async-handler");
 const validateMongoDbId = require('../utils/validateMongoDbId');
@@ -12,7 +13,7 @@ const { generateRefreshToken } = require('../config/refreshToken');
 const jwt = require("jsonwebtoken");
 
 const sendEmail = require('../controller/emailCtrl');
-const crypto = require("crypto");
+
 
 // Create User
 const createUser = asyncHandler(async (req, res) => {
@@ -63,37 +64,33 @@ const createUser = asyncHandler(async (req, res) => {
     });
 
     // login admin
-    const loginAdmin = asyncHandler(async (req, res) => {
-      const {email, password} = req.body;
-     // check if user exists or not
-     const findAdmin = await User.findOne({ email });
-     if(findAdmin.role !== 'admin') throw new Error("Not Authorised");
-     if (findAdmin && await findAdmin.isPasswordMatched(password)) {
-      const refreshToken = await generateRefreshToken(findAdmin?._id);
-      const updateuser = await User.findByIdAndUpdate(
-        findAdmin.id, 
-        {
-        refreshToken: refreshToken,
-      }, 
-      { new: true }
-      );
-      res.cookie('refreshToken', refreshToken, {
-        httpOnly:true,
-        maxAge:72 * 60 * 60 * 1000,
-      });
-      res.json({
-          _id: findAdmin?._id,
-          firstname: findAdmin?.firstname,
-          lastname: findAdmin?.lastname,
-          email: findAdmin?.email,
-          mobile: findAdmin?.mobile,
-          token: generateToken(findAdmin?._id),
-      });
-     }else {
-      throw new Error ("Invalid Credentials");
-     }
-  });
-
+  
+const loginAdmin = asyncHandler(async (req, res) => {
+  const {email, password } = req.body;
+  const findAdmin = await User.findOne({email});
+  if (findAdmin.role !== "admin") throw new Error ("Not Authorized!");
+  if (findAdmin && (await findAdmin.isPasswordMatched(password))) {
+    const refreshToken = await generateRefreshToken(findAdmin?._id);
+    const updateadmin = await User.findByIdAndUpdate(
+      findAdmin._id, {refreshToken: refreshToken},
+      {new: true}
+    );
+    res.cookie("refreshToken", refreshToken, {
+      httpOnly: true,
+      maxAge: 72 * 60 * 60 * 1000,
+    });
+    res.json({
+      _id: findAdmin._id, 
+      firstName: findAdmin.firstname,
+      lastName: findAdmin.lastname,
+      email: findAdmin.email,
+      mobile: findAdmin.mobile, 
+      token: generateToken(findAdmin._id),
+    });
+  } else {
+    throw new Error("Invalid credentials");
+  }
+});
     //handle refresh token
 
     const handleRefreshToken = asyncHandler(async ( req, res) =>{
@@ -125,7 +122,7 @@ const createUser = asyncHandler(async (req, res) => {
         });
         return res.sendStatus(204); // forbidden
       }
-      await User.findOneAndUpdate(refreshToken, {
+      await User.findOneAndUpdate( refreshToken, {
         refreshToken: "",
       });
       res.clearCookie('refreshToken', refreshToken, {
@@ -319,7 +316,7 @@ const createUser = asyncHandler(async (req, res) => {
         const token = await user.createPasswordResetToken();
         await user.save();
         const resetURL = `Hi, Please click on this link to reset Your Password.
-           This link is valid till 10 minutes from now <a href="http://localhost:8000/api/user/reset-password/${token}">Click Here</>`
+           This link is valid till 10 minutes from now <a href="http://localhost:8000/api/user/reset-password/${token}">Click Here</>`;
            const data = {
             to: email,
             text: "Hey User",
@@ -518,4 +515,4 @@ const createUser = asyncHandler(async (req, res) => {
 module.exports = { createUser, loginUserCtrl, getAllUser, getAUser, deleteAUser,
    createOrder, updateOrderStatus, getOrders, applyCoupon, emptyCart, userCart, 
    getUserCart, getWishlist, saveAddress,  updatedUser, resetPassword, loginAdmin,
-    blockUser, forgotPasswordToken, updatePassword, logout, handleRefreshToken, unblockUser};3
+    blockUser, forgotPasswordToken, updatePassword, logout, handleRefreshToken, unblockUser};

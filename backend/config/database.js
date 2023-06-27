@@ -1,11 +1,12 @@
-const {default: mongoose } = require('mongoose');
+const mongoose = require ("mongoose")
 
 const database = () => {
-    try {
-    const conn= mongoose.connect(process.env.MONGODB_URL);
-    console.log('Database connected successfully');
-     } catch (error) {
-        console.log('Database error');
-    } 
-};
+    mongoose.connect(process.env.MONGODB_URL, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    }).then((data) => {
+        console.log(`Mongodb connected with server: ${data.connection.host}`)
+    });
+}
+
 module.exports = database;

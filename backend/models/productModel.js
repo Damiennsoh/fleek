@@ -1,63 +1,65 @@
-const mongoose = require('mongoose'); // Erase if already required
+const mongoose = require("mongoose"); // Erase if already required
 
-// Declare the Schema of the Mongo model
-var productSchema = new mongoose.Schema({
+// Product Schema
+var productSchema = new mongoose.Schema(
+  {
     title: {
-        type:String,
-        required:true,
-        trim: true,
+      type: String,
+      required: true,
+      trim: true,
     },
     slug: {
-        type:String,
-        required:true,
-        unique:true,
-        lowercase:  true,
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
     },
     description: {
-        type:String,
-        required:true,
+      type: String,
+      required: true,
     },
     price: {
-        type:Number,
-        required:true,
+      type: Number,
+      required: true,
     },
     category: {
         type: String,
         required: true,
-    },
-    brand: {
+      },
+      brand: {
         type: String,
+        // enum: ["Apple", "Samsung", "Lenovo"],
         required: true,
-    },
-    quantity: {
+      },
+      quantity: {
         type: Number,
         required: true,
-    },
-    sold: {
+      },
+      sold: {
         type: Number,
-        default:0,
-        select: false,
-    },
-    images: {
-        types: Array,
-    },
-    color: {
-        type: String,
-        require: true,
-    },
+        default: 0,
+        // select: false,
+      },
+      images: [],
+    color: [],
+    tags: [],
     ratings: [
-        {
+      {
         star: Number,
         comment: String,
-        postedby: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+        postedby: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "User",
         },
+      },
     ],
-    totalratings: {
-        type: String,
-        default: 0,
+    totalRating: {
+      type: String,
+      default: 0,
     },
-}, { timestamps: true },
+  },
+  { timestamps: true }
 );
 
 //Export the model
-module.exports = mongoose.model('Product', productSchema);
+module.exports = mongoose.model("Product", productSchema);
