@@ -2,9 +2,10 @@ const Product = require('../models/productModel');
 const asyncHandler = require("express-async-handler");
 const slugify = require("slugify");
 const validateMongoDbId = require('../utils/validateMongoDbId');
-const { get } = require('mongoose');
+
 const cloudinaryUploadImg = require("../utils/cloudiinary");
 const fs = require("fs");
+//create a product
 const createProduct = asyncHandler(async (req, res) => {
     try {
         if (req.body.title) {
@@ -16,25 +17,44 @@ const createProduct = asyncHandler(async (req, res) => {
         throw new Error(error);
     }
 });
+// update product
+// const updateProduct = asyncHandler(async (req, res) => {
+//     const {id} = req.params;
+//     validateMongoDbId(id);
+//     try {
+
+//         if (req.body.title) {
+//             req.body.slug = slugify(req.body.title);
+//         }
+//         const updateProducts = await Product.findOneAndUpdate (id , req.body,{
+//              new: true,
+//             });
+//             res.json(updateProducts);
+//             console.log(updateProducts);
+//         } catch (error) {
+//         throw new Error(error);
+//     }
+// });
 
 const updateProduct = asyncHandler(async (req, res) => {
-    const id = req.params;
+    const { id } = req.params;
     validateMongoDbId(id);
     try {
-
-        if (req.body.title) {
-            req.body.slug = slugify(req.body.title);
-        }
-        const updateProduct = await Product.findByIdAndUpdate ({ id }, req.body,{
-             new: true,
-            });
-            res.json(updateProduct);
-        } catch (error) {
-        throw new Error(error);
+      if (req.body.title) {
+        req.body.slug = slugify(req.body.title);
+      }
+  
+      const updateProducts = await Product.findOneAndUpdate(id, req.body, {
+        new: true,
+      });
+      console.log(updateProducts);
+      res.json(updateProducts);
+    } catch (error) {
+      throw new Error(error);
     }
-});
-
-
+  });
+  
+// delete a product
 const deleteProduct = asyncHandler(async (req, res) => {
     const id = req.params;
     validateMongoDbId(id);
@@ -43,7 +63,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
         if (req.body.title) {
             req.body.slug = slugify(req.body.title);
         }
-        const deleteProduct = await Product.findByIdAndDelete ({ id }, req.body,{
+        const deleteProduct = await Product.findOneAndDelete ({ id }, req.body,{
              new: true,
             });
             res.json(deleteProduct);
@@ -52,6 +72,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
     }
 });
 
+// get a prroduct
 const getaProduct = asyncHandler(async (req, res) => {
     const { id } = req.params;
     validateMongoDbId(id);

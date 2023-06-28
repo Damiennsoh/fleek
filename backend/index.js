@@ -22,7 +22,7 @@ process.on("uncaughtException", (err) => {
 // Configure the port to listen on
 if (process.env.NODE_ENV !== "PRODUCTION") {
     require("dotenv").config({
-      path: "./config/.env",
+      path: "backend/config/.env",
     });
   }
 
